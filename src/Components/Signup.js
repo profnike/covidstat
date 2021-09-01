@@ -7,6 +7,11 @@ function Signup() {
   const[email, setEmail]=useState("")
   const[existstyle, setExiststyle]=useState({display:"none"})
   const[complete, setComplete]=useState({display:"none"})
+  const[incomplete, setIncomplete]=useState({display:"none"})
+  const[existtotalstyle,  setExisttotalstyle]=useState({display:"none"})
+  const[none,  setNone]=useState({display:"none"})
+
+ 
 
   const history = useHistory();
 
@@ -25,14 +30,23 @@ function Signup() {
     if(coviduser === null){
       coviduser = [];
   }
-    if((names==="")||(email==="")){
-      console.log("incomplete information")
+  if((names==="")&&(email==="")){
+    setNone({display:"inline"})
+  }
+    else if((names==="")||(email==="")){
+      setIncomplete({display:"inline"})
     }
     else{
 
   
       const same = coviduser.filter(el=> el.username === names);
-      if (same.length===0) {
+      const samemail = coviduser.filter(el=> el.email === email);
+      if ((samemail.length!=0)&&(same.length!=0)) {
+        setExisttotalstyle({display:"inline"})
+          
+      } 
+      else if(same.length!=0){setExiststyle({display:"inline"})}
+      else  {
         coviduser = [...coviduser, {"username": names, "email": email}]
           localStorage.setItem('coviduser', JSON.stringify(coviduser));
           localStorage.setItem('userloggedin', names);
@@ -42,8 +56,9 @@ function Signup() {
           afterSignup();
           
       } 
-      else{setExiststyle({display:"inline"})}
-
+      //else{setExiststyle({display:"inline"})}
+      //(same.length===0)
+      
   
 }
   
@@ -54,19 +69,31 @@ function Signup() {
     return (
       <div className="Signup">
         <div className="existdiv" style={existstyle}>
-          <p>Account already exists!</p>
+          <p>Username already exists!</p>
           <p className="okaydiv" onClick={(e)=>{ setExiststyle({display:"none"}) }}>Ok</p>
+        </div>
+        <div className="existdiv" style={existtotalstyle}>
+          <p>Account already exists!</p>
+          <p className="okaydiv" onClick={(e)=>{ setExisttotalstyle({display:"none"}) }}>Ok</p>
         </div>
         <div className="completediv" style={complete}>
           <p>Account created successfully.</p>
+         
+        </div>
+        <div className="completediv" style={incomplete}>
+          <p>Incomplete Information.</p>
+         
+        </div>
+        <div className="completediv" style={none}>
+          <p>Kindly input your Information.</p>
          
         </div>
       <div className="signup-body">
       
           <h3>Signup</h3>
           <p>To get  updates on Covid-19 information</p>
-        <input type="text" placeholder="Name:" onChange={(e)=>{ setNames(e.target.value); }}/>
-        <input type="email" name="email" placeholder="Email:" onChange={(e)=>{ setEmail(e.target.value); }}/>
+        <input type="text" placeholder="Username:" onChange={(e)=>{ setNames(e.target.value);setIncomplete({display:"none"});setNone({display:"none"}) }}/>
+        <input type="email" name="email" placeholder="Email:" onChange={(e)=>{ setEmail(e.target.value);setIncomplete({display:"none"});setNone({display:"none"})}}/>
         <button className="signup-butn" onClick={(e)=>{ signingup(); }}>Sign Up</button>
       </div>
        

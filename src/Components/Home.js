@@ -19,6 +19,14 @@ function Home() {
   <Dropdown.Toggle variant="success" id="dropdown-basic">
     Menu
   </Dropdown.Toggle>
+  <ul>
+            <Link className="links" to="/"><li>Home</li></Link>
+            <Link className="links" to="/About"><li>About</li></Link>
+            <Link className="links" to="/Precautions"><li>Covid Information</li></Link>
+          
+          </ul>
+          <Link className="links" to="/Signup"><button className="signup">Sign Up</button></Link>
+
 
   <Dropdown.Menu className="dropmobile">
   <Link className="links" to="/"><Dropdown.Item href="#/" className="itemName">Home</Dropdown.Item></Link>
@@ -27,13 +35,7 @@ function Home() {
     <Link className="links" to="/Signup"><button className="menuButton">Sign Up</button></Link>
  </Dropdown.Menu>
 </Dropdown>
-          <ul>
-            <Link className="links" to="/"><li>Home</li></Link>
-            <Link className="links" to="/About"><li>About</li></Link>
-            <Link className="links" to="/Precautions"><li>Covid Information</li></Link>
           
-          </ul>
-          <Link to="/Signup"><button className="signup">Sign Up</button></Link>
         </div>
         <div className="home-text">
      <p>According to WHO</p>

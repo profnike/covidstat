@@ -30,6 +30,10 @@
     height: 30px;
     border-radius: 10px;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
 .Signup{
     cursor: pointer;
@@ -46,15 +50,16 @@
     
     width: 200px;
     height: 55px;
-    
-    padding-top: 0px;
+    line-height: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
    align-items: center;
     justify-content: space-between;
     border: 1px solid black;
     border-radius: 10px;
-  
-   margin-bottom: 20px;
-  
+  font-weight: bold;
+   
+  margin-bottom: 20px;
 }
 .completediv{
     
@@ -63,17 +68,18 @@
     
    
    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     border: 1px solid black;
     border-radius: 10px;
-  
+  padding-top: 5px;
    margin-bottom: 20px;
    display: flex;
+   font-weight: bold;
 }
 .okaydiv{
     border: 1px solid black;
-    margin-top: 5px;
-    
+    padding: 5px;
+    margin-bottom: 5px;
     margin-right: 20px;
     width: 40px;
     float: right;

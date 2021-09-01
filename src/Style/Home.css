@@ -123,6 +123,9 @@ display: none;
     .navarea ul{
         display:none
     }
+    .navarea li{
+       margin-right: 0px;
+    }
     .navMenu{
         display: flex;
     }
@@ -131,5 +134,9 @@ display: none;
         color: white;
     }
     .navarea{
-    padding-left: 40px};
+    padding-left: 10px;
+padding-right: 10px;
+justify-content: space-between;
+    }
+    
 }
