@@ -33,7 +33,7 @@ function Home() {
             <Link className="links" to="/Precautions"><li>Covid Information</li></Link>
           
           </ul>
-          <button className="signup">Sign Up</button>
+          <Link to="/Signup"><button className="signup">Sign Up</button></Link>
         </div>
         <div className="home-text">
      <p>According to WHO</p>
