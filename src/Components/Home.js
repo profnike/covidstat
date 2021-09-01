@@ -15,11 +15,7 @@ function Home() {
         
         <div className="navarea">
           <h3 className="covidLogo">CovidStat</h3>
-          <Dropdown className="dropdown">
-  <Dropdown.Toggle variant="success" id="dropdown-basic">
-    Menu
-  </Dropdown.Toggle>
-  <ul>
+          <ul>
             <Link className="links" to="/"><li>Home</li></Link>
             <Link className="links" to="/About"><li>About</li></Link>
             <Link className="links" to="/Precautions"><li>Covid Information</li></Link>
@@ -28,6 +24,11 @@ function Home() {
           <Link className="links" to="/Signup"><button className="signup">Sign Up</button></Link>
 
 
+          <Dropdown className="dropdown">
+  <Dropdown.Toggle variant="success" id="dropdown-basic">
+    Menu
+  </Dropdown.Toggle>
+  
   <Dropdown.Menu className="dropmobile">
   <Link className="links" to="/"><Dropdown.Item href="#/" className="itemName">Home</Dropdown.Item></Link>
     <Link className="links" to="/About"><Dropdown.Item href="#/" className="itemName">About</Dropdown.Item></Link>
