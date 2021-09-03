@@ -5,24 +5,65 @@
 }
 .mb-2{
     background-color: rgb(126, 13, 13);
-    margin-right: 20px;
+    margin-right: 10px;
 }
 Card{
     margin-right: 20px;
     background-color: rgb(126, 13, 13);
 }
+.Checker{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+ #spin{
+    color: red;
+    font-weight: bolder;
+    margin-top: 40vh;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 50px;
+    height: 50px;
+}
+.Checker{
+   
+    padding: 20px;
+}
 .resetButton{
-    height:30px;
-    margin-left: -50px;
-    margin-top: 2.8px;
+    height:36px;
+    margin-left: -67px;
+    margin-top: 33px;
     padding: 3px;
-    border: 1px solid black;
+    border: 0px solid black;
     cursor: pointer;
     background-color: grey;
     color: white;
+   
+ 
+  z-index: 100000;
+}
+.inputdiv{
+    padding-left: 10px;
+    display: flex;
+    border: 2px solid black;
+    align-items: center;
+    max-width: 50%;
+    height: 35px;
+    position: relative;
+}
+.inputsearch{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
 }
 .resetButton:hover{
     background-color: black;
+    
+   
+   
    
 }
 .covidcheckerhorizontal{
@@ -32,3 +73,19 @@ Card{
     margin: 0 auto;
     width: 280px;
 }
+@media screen and (min-width:959px) {
+   .colum #carrd{
+    max-width: 240px;
+    min-width: 240px;
+line-height: 10px;
+    }
+    
+}
+@media screen and (max-width:960px) {
+    .colum #carrd{
+     max-width: 180px;
+     min-width: 180px;
+ line-height: 18px;
+     }
+     
+ }
