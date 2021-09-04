@@ -11,6 +11,11 @@ import React, {useEffect,useState} from 'react';
 import {Link} from "react-router-dom"
 import Spinner from 'react-bootstrap/Spinner'
 import NumberFormat from 'react-number-format'
+import InputGroup from 'react-bootstrap/InputGroup'
+import Button from 'react-bootstrap/Button'
+import FormControl from 'react-bootstrap/FormControl'
+
+
 
 function Checker() {
   const [latest,setLatest]=useState([])
@@ -20,18 +25,21 @@ function Checker() {
   const [loading, setLoading]=useState(false)
   const [post, setPost]=useState(null)
   const [content, setContent]=useState({display:"none"})
- 
+  const [button, setButton]=useState({marginTop:"20px",backgroundColor:"black",color:"white",marginBottom:"20px",
+border:"none",outline:"none"})
   const [headInputs, setHeadInputs]=useState({fontWeight:"bold",
 display:"none", fontSize:"medium",})
 
 const [searchDatar, setSearchDatar]=useState("")
 
    
-  
+  function resets(){}
 
   function reset(){
    
    setCountry("")
+   setButton({border:"none",outline:"none",color:"white",backgroundColor:"black",
+   marginTop:"20px",marginBottom:"20px",border:"1.5px solid black"})
     
   }
   useEffect(()=>{
@@ -152,19 +160,29 @@ const [searchDatar, setSearchDatar]=useState("")
     </Card.Footer>
   </Card>
 </CardGroup>
+<>
 
-<Form>
-  <Form.Group className="mb-3" controlId="formGroupSearch" style={{
-    display:"flex"
-  }}>
-    
-    <Form.Control type="text" placeholder="Enter Country name" value={country} onChange={e => setCountry(e.target.value)}
-    style={{marginTop:"15px",position:"relative",border:"3px solid black",marginBottom:"15px",marginLeft:"20px",marginRight:"20px"}} />
-  <div className="resetButton" onClick={e => reset()}>Reset</div>
-  </Form.Group>
+
+  <InputGroup className="mb-3">
+    <FormControl
+      id="fControl"
+      aria-label="Recipient's username"
+      aria-describedby="basic-addon2"
+      type="text" placeholder="Enter Country name" value={country}
+      onChange={e => setCountry(e.target.value)}
+      style={{marginLeft:"20px",marginTop:"20px",marginBottom:"20px",border:"1.5px solid black"}}
+    />
+    <Button variant="outline-secondary" style={button} id="button-addon2" onClick={e => reset()}>
+     Reset
+    </Button>
+  </InputGroup>
 
   
-</Form>
+
+ 
+  </>
+
+
 
 <Row xs={1} md={4} className="g-4">{countryCases}
       </Row>

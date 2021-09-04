@@ -38,12 +38,18 @@ Card{
     padding: 3px;
     border: 0px solid black;
     cursor: pointer;
-    background-color: grey;
+    background-color: rgb(48, 47, 47);
     color: white;
    
  
   z-index: 100000;
 }
+
+
+    input:focus,textarea:focus,select:focus{
+        outline:none;
+    }
+
 .inputdiv{
     padding-left: 10px;
     display: flex;
