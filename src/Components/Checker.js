@@ -87,7 +87,7 @@ const [searchDatar, setSearchDatar]=useState("")
       text="dark"
       className="text-center"
       id="carrd"
-      style={{margin:"5px",lineHeight:"10px", }}>
+      style={{margin:"5px", }}>
         <Card.Img variant="top" src={data.countryInfo.flag} style={{height:"140px",}} />
         <Card.Body>
           <Card.Title  > {data.country}</Card.Title>
@@ -159,7 +159,7 @@ const [searchDatar, setSearchDatar]=useState("")
   }}>
     
     <Form.Control type="text" placeholder="Enter Country name" value={country} onChange={e => setCountry(e.target.value)}
-    style={{marginTop:"30px",position:"relative",border:"3px solid black",marginBottom:"25px",marginLeft:"20px",marginRight:"20px"}} />
+    style={{marginTop:"15px",position:"relative",border:"3px solid black",marginBottom:"15px",marginLeft:"20px",marginRight:"20px"}} />
   <div className="resetButton" onClick={e => reset()}>Reset</div>
   </Form.Group>
 
