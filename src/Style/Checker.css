@@ -34,7 +34,7 @@ Card{
 .resetButton{
     height:36px;
     margin-left: -67.5px;
-    margin-top: 18px;
+    margin-top: 17.5px;
     padding: 3px;
     border: 0px solid black;
     cursor: pointer;
@@ -84,7 +84,7 @@ line-height:4px;
 @media screen and (max-width:960px) {
     .colum #carrd{
      
- ;
+ 
      }
      
  }
