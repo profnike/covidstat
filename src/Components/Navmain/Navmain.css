@@ -1,41 +1,3 @@
-*{
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-}
-.home-body{
-    background-image: url("../Images/darkcovid.jpg");
-    color: white;
-    background-size: cover;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
-    height: 100vh;
-    
-    
-}
-
-.home-text{
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 30vh;
-  
-}
-
-.home-text button{
-    margin-top: 20px;
-    padding: 8px;
-    border-radius: 30px;
-    width: 100px;
-    border: none;
-    
-}
-.home-text button:hover{
-    background-color: rgb(53, 51, 51);
-    color: white;
-}
 .navarea{
     
     margin-bottom: 70px;
@@ -48,6 +10,28 @@
     padding: 0px 10px;
     padding-left: 50px;
     padding-right: 40px;
+}
+.navarea ul{ 
+   
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navarea li{
+    margin-right: 30px;
+    color:white;
+}
+.navarea li:hover{
+   
+    color: rgb(158, 155, 155);
+}
+
+
+.navMenu{
+    display: none;
+
 }
 .signup{
     padding: 8px;
@@ -86,33 +70,11 @@ display: none;
     justify-content: center;
     background-color: black;
 }
-
-
-.navarea ul{ 
-   
-    text-decoration: none;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.navarea li{
-    margin-right: 30px;
-}
-.navarea li:hover{
-    color: black;
-}
-.navMenu{
-    display: none;
-
-}
 .links{
     text-decoration: none;
     list-style: none;
     color:white;
 }
-
-
 @media screen and (max-width:960px) {
     .signup{
         display:none
@@ -129,10 +91,7 @@ display: none;
     .navMenu{
         display: flex;
     }
-    .home-text button:hover{
-        background-color: rgb(53, 51, 51);
-        color: white;
-    }
+    
     .navarea{
     padding-left: 10px;
 padding-right: 10px;

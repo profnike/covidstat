@@ -85,12 +85,8 @@ Card{
     min-width: 240px;
 line-height:4px;
     }
+    .covidcheckerhorizontal{
+        margin-bottom: 20px;
+    }
     
 }
-@media screen and (max-width:960px) {
-    .colum #carrd{
-     
- 
-     }
-     
- }

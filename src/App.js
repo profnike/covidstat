@@ -1,8 +1,9 @@
-import About from './Components/About'
-import Checker from './Components/Checker'
-import Home from './Components/Home'
-import Signup from './Components/Signup'
-import Precautions from './Components/Precautions'
+import About from './Pages/About/About'
+import Checker from './Pages/Checker/Checker'
+import Home from './Pages/Home/Home'
+import Signup from './Pages/Signup/Signup'
+import Precautions from './Pages/Precaution/Precautions'
+
 import { Route,Switch} from "react-router-dom"
 import './App.css';
 

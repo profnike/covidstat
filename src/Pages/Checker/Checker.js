@@ -1,4 +1,4 @@
-import '../Style/Checker.css'
+import '../Checker/Checker.css'
 import CardGroup from 'react-bootstrap/CardGroup'
 import CardColumns from 'react-bootstrap/CardColumns'
 import Row from 'react-bootstrap/Row'
@@ -14,6 +14,7 @@ import NumberFormat from 'react-number-format'
 import InputGroup from 'react-bootstrap/InputGroup'
 import Button from 'react-bootstrap/Button'
 import FormControl from 'react-bootstrap/FormControl'
+import Navarea from '../../Components/Navarea/Navarea';
 
 
 
@@ -117,9 +118,13 @@ const [searchDatar, setSearchDatar]=useState("")
  
   
     return (
+      <div >
+           <Navarea/>
       <div className="Checker">
          {loading ? 
-       ( <div >
+       (
+          <div>
+     
        <h2>Covid-19 Statistics</h2>
        <hr className="covidcheckerhorizontal"></hr>
       <CardGroup>
@@ -187,13 +192,15 @@ const [searchDatar, setSearchDatar]=useState("")
 <Row xs={1} md={4} className="g-4">{countryCases}
       </Row>
 
-      
-      </div>)
+      </div>
+      )
  
 
       : (<Spinner animation="border" id="spin" 
       />)}
       </div>
+      </div>
+     
     );
   }
   

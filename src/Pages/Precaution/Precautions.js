@@ -1,11 +1,17 @@
-import '../Style/Precautions.css'
+import '../Precaution/Precautions.css'
 import LoremIpsum from 'react-lorem-ipsum'
-import img from '../Images/Index'
+
+import img from '../../Images/Index'
+
+import Navarea from '../../Components/Navarea/Navarea'
 
 function Precautions() {
  let sroc=img.washhand
     return (
+      <div>
+         <Navarea/>
       <div className="covidInfo">
+       
      <h1>Epidemiology</h1>
      <hr className="covidInfohorizontal"></hr>
        <div>
@@ -39,6 +45,7 @@ function Precautions() {
      <LoremIpsum avgSentencesPerParagraph={3}/>
      </div>
      </div>
+      </div>
       </div>
     );
   }

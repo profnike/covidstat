@@ -1,4 +1,4 @@
-import '../Style/Signup.css'
+import '../Signup/Signup.css'
 import react, {useState,useEffect}  from "react"
 import { useHistory } from 'react-router-dom';
 

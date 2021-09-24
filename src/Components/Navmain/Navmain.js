@@ -1,19 +1,12 @@
-
-import img from '../Images/Index'
-import {Link} from "react-router-dom"
-import MenuIcon from '@material-ui/icons/Menu'
 import Dropdown from 'react-bootstrap/Dropdown'
-import '../Style/Home.css'
+import React from 'react'
+import {Link} from "react-router-dom"
+import '../Navmain/Navmain.css'
 
+const Navmain=()=>{
 
-
-function Home() {
-    return (
-      <div className="home-body">
-      <div className="home-div">
-        
-        
-        <div className="navarea">
+return(
+<div className="navarea">
           <h3 className="covidLogo">CovidStat</h3>
           <ul>
             <Link className="links" to="/"><li>Home</li></Link>
@@ -38,16 +31,5 @@ function Home() {
 </Dropdown>
           
         </div>
-        <div className="home-text">
-     <p>According to WHO</p>
-     <p>Coronavirus disease(COVID-19) is an infectious disease caused by a 
-       newly discovered coronavirus</p>
-       <p>To know more on the statistics of this disease in various countries</p>
-       <Link to="/Checker"><button>Click Here</button></Link>
-      </div>
-      </div>
-      </div>
-    );
-  }
-  
-  export default Home;
+)}
+export default Navmain
